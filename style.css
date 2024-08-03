@@ -1,0 +1,81 @@
+header{
+    display: flex;
+    justify-self: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+}
+
+#address{
+    font-weight: 100;
+    font-size: 10px;
+    text-align: right;  
+    display: block;     
+    margin-left: auto; 
+}
+
+.header-container, .content-container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+header, main {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo-container img{
+    height: 30px;
+    margin-right: 10px ;
+}
+
+#calc{
+    margin: 0;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+#company{
+    margin: 0;
+    font-size: 10px;
+    font-weight: 200;
+}
+
+.lang_skills h2{
+    font-size:large;
+}
+
+#options{
+    color: white;
+    background-color: black;
+}
+
+h1{
+    text-transform: uppercase;
+    color: black;
+}
+
+h1:hover{
+    color: brown;
+    transition: 0.3s;
+}
+
+#h3, #h4{
+    font-family: Helvetica, sans-serif;
+    font-size: small;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}

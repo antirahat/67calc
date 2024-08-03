@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Federal Skilled Worker Program: Calculator </title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "style.css">
+    
+
+</head>
+<body>
+    <div class = "header-container">
+    <header>
+        <div class = "logo-container">
+            <img src="logo.png" alt="Logo" class="logo">
+            <div class = "title">
+                <h4 id ="company">Imagine Immigration</h4>
+                <h3 id ="calc">Six Factor Calculator</h3>
+            </div>
+        <div class ="left container">
+            <p id = "address">Mailing Address: 502, 55 Commerce Valley Dr W</p>
+            <p id ="address">Markham, ON, L3T 7V9, Canada</p>
+        </div>    
+    </header>
+    </div>
+<div class ="content-container">
+    <main>
+    <div class = "lang_skills">
+        <h1><b>Language Skills</b></h1>
+        <h3 id = h3>First Official Language (Max 24 Points)</h3>
+        <h4 id = h4>Enter your CLB Level</h4>
+        <!--this is a spinbox for clb level-->
+        <!-- <label for="options"></label> -->
+        <select id="options" name="options">
+        <option selected>Choose you CLB Level:</option>
+        <option value="option1">CLB Level 9 or Higher</option>
+        <option value="option2">CLB Level 8</option>
+        <option value="option3">CLB Level 7</option>
+        <option value="option4">Below CLB Level 7</option>
+    </select>
+    
+    
+    <h3 id= h3>Second Official Language (Max 4 Points)</h3>
+    <h4 id = h4>Enter your CLB Level</h4>
+    <select id="options" name="options">
+        <option selected>Choose you CLB Level:</option>
+        <option value="option1">CLB 5 in All 4 abilities</option>
+        <option value="option2">CLB 4 or less</option>
+    </select>
+    <details>
+        <summary>CLB Level Breakdown</summary>
+        <div class = "clb_breakdown">
+            <h4>CLB Level Breakdown</h4>
+            <table>
+                <style>
+                    table {
+                        width: 100%;
+                        border-collapse: collapse;
+                    }
+                    th, td {
+                        border: 1px solid black;
+                        padding: 8px;
+                        text-align: left;
+                    }
+                    th {
+                        background-color: #f2f2f2;
+                    }
+                </style>
+                <thead>
+                    <tr>
+                        <th>First official language</th>
+                        <th>Speaking</th>
+                        <th>Listening</th>
+                        <th>Reading</th>
+                        <th>Writing</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CLB level 9 or higher</td>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>CLB level 8</td>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>CLB level 7</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>Below CLB level 7</td>
+                        <td colspan="4">Not eligible to apply</td>
+                    </tr>
+                </tbody>
+            </table>  
+        </div>
+    </details>
+    
+
+    </div>
+   
+    <div class = "Education">
+        <h1>Education</h1>
+        <h3 id= h3>Select your level of education</h3>
+        <select id ="options" name ="option">
+            <option selected>Level of education</option>
+            <!-- <option value = "1"></option> -->
+        </select>
+    </div>
+
+    <div class = "work_exp">
+        <h1>Work Experiance</h1>
+        <select id ="options" name ="option">
+            <option selected>Year</option>
+            <option value ="option1">1 year</option>
+            <option value ="option2">2 -3 year</option>
+            <option value ="option3">4-5 year</option>
+            <option value ="option4">6 or more year</option>
+        </select>
+    </div>
+    <div class = "Age">
+        <h1>Age</h1>
+        <select id = "options" name="option">
+            <option selected>Select your age</option>
+            <option value ="option1">Under 18</option>
+            <option value ="option1">18-35</option>
+            <option value ="option1">36</option>
+            <option value ="option1">37</option>
+            <option value ="option1">38</option>
+            <option value ="option1">39</option>
+            <option value ="option1">40</option>
+            <option value ="option1">41</option>
+            <option value ="option1">42</option>
+            <option value ="option1">43</option>
+            <option value ="option1">44</option>
+            <option value ="option1">45</option>
+            <option value ="option1">46</option>
+            <option value ="option1">47 or Older</option>
+            <option value ="option1">Und8</option>
+        </select>
+    </div>
+    <div class = "employment">
+        <h1>Arranged Employment</h1>    
+        <select id ="options" name = "option">
+            <option selected>Select from the spinbox</option>
+            <option value = "option1">Situation 1</option>
+            <option value = "option1">Situation 2</option>
+            <option value = "option1">Situation 3</option>
+            <option value = "option1">Situation 4</option>
+
+        </select>
+    </div>
+    <details>
+        <summary>More</summary>
+        <div class ="details_employ">
+            <p><h4>Situation 1</h4>
+                <p>You currently work in Canada on a work permit and you meet all of the following conditions:</p>
+                <ul>
+                    <li>Your work permit is valid both when you apply and when the permanent resident visa is issued (or youre allowed to work in Canada without a work permit when your visa is issued).</li>
+                    <li>We issued your work permit based on a positive labour market impact assessment (LMIA) from Employment and Social Development Canada in an occupation listed in TEER category 0, 1, 2 or 3 of the NOC.</li>
+                    <li>Youre working for an employer named on your work permit.</li>
+                    <li>That employer has made a valid job offer based on you being accepted as a skilled worker.</li>
+                </ul>
+            </p>
+        </div>
+    </details>
+</body>
+</main>
+</div>
+</html>
