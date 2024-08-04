@@ -1,10 +1,72 @@
-header{
+body{
+    min-width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.all{
+    width: 80%;
+    height: 60%;
+    /* border: 2px solid black; */
+    overflow-y: scroll;
+    /* overflow: hidden;  */
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+.body-container{
+    display: flex;
+}
+
+/* header{ 
     display: flex;
     justify-self: space-between;
     align-items: center;
     padding: 30px 10%;
     background-color: white;
     border-bottom: 1px solid #ccc;
+} */
+
+.sidenote {
+    width: 30%;
+    height: 100%;
+    background-color: brown;
+    color: white;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    /* line-height: 1.6; */
+    position: relative; /* Ensure the element's position is relative to allow for animation */
+    left: -100%; /* Start off-screen to the left */
+    transition: ease-in;
+    animation: slideIn 1s forwards; /* Apply slide-in animation */
+}
+
+@keyframes slideIn {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0; /* End at its normal position */
+    }
+}
+
+.sidenote p {
+    margin-bottom: 20px; /* Adjust the space between paragraphs */
+}
+
+#f1{
+    font-size: 2rem;
+}
+
+
+.content-container{
+    height: 100%;
+    width: 68%;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 #address{
@@ -12,10 +74,11 @@ header{
     font-size: 10px;
     text-align: right;  
     display: block;     
-    margin-left: auto; 
+    margin-left: auto;
+    width: 200px; 
 }
 
-.header-container, .content-container{
+.header-container{
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -38,6 +101,31 @@ header, main {
 .logo-container img{
     height: 30px;
     margin-right: 10px ;
+}
+
+#options {
+    color: white;
+    background-color: black;
+    overflow: hidden; /* Ensures the text is hidden until the animation reveals it */
+    white-space: nowrap; /* Prevents text from wrapping */
+    border-right: 2px solid white; /* Creates the cursor effect */
+    animation: typewriter 2s steps(40) 1s 1 normal both,blink 0.75s step-end 2s 1 normal both;
+    transition: 2s ease-in-out;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 25%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
 
 #calc{
@@ -69,6 +157,7 @@ h1{
 h1:hover{
     color: brown;
     transition: 0.3s;
+    transform: translateY(-3px);
 }
 
 #h3, #h4{
@@ -76,6 +165,23 @@ h1:hover{
     font-size: small;
 }
 
+.lang_skills, .education, .age, .employment, .work_exp, .adaptibility, details{
+    padding: 8px;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
+}
+
+@media only screen and (max-width: 600px){
+    .all{
+        width: 100%;
+        height: 100%;
+    }
+    #company{
+        font-size: 5px;
+    }
+    #calc{
+        font-size: 10px;
+    }
 }
