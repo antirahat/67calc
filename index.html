@@ -10,7 +10,8 @@
 
 </head>
 <body>
-    <div class = "header-container">
+<div class ="all">
+    <!-- <div class = "header-container">
     <header>
         <div class = "logo-container">
             <img src="logo.png" alt="Logo" class="logo">
@@ -19,17 +20,98 @@
                 <h3 id ="calc">Six Factor Calculator</h3>
             </div>
         <div class ="left container">
-            <p id = "address">Mailing Address: 502, 55 Commerce Valley Dr W</p>
-            <p id ="address">Markham, ON, L3T 7V9, Canada</p>
+            <p id = "address">Mailing Address: 502, 55 Commerce Valley Dr W
+                Markham, ON, L3T 7V9, Canada
+            </p>
+            
         </div>    
     </header>
+    </div> -->
+<div class="body-container">    
+    <div class = "sidenote">
+        <P id="f1"><Strong>Federal Skilled Worker: Six Selection Factor Calculator</Strong></P>
+        <p id="f2">We use selection factor points to help assess your eligibility for the Federal Skilled Worker Program.<br>
+
+            <strong>These points are different from the points we use to</strong> <a href="http://ircc.canada.ca/english/immigrate/skilled/crs-tool.asp"> rank your profile in the Express Entry pool</a>.<br>
+            
+            We’ll assess your selection factors and assign an overall score out of 100.<br>
+            
+            <strong>If you score 67 points or higher,</strong> you may qualify for the Federal Skilled Worker Program. You can then submit a profile to the Express Entry pool.<br>
+            <strong>If you score lower then 67 points,</strong> you won't qualify for the program. You may be able to get a higher score by doing things like:
+            <ul>
+                <li>improving your language skills</li>
+                <li>completing another degree, diploma, or certificate</li>
+                <li>receiving an offer of arranged employment in Canada</li>
+            </ul>
+        
+        </p>
     </div>
 <div class ="content-container">
     <main>
     <div class = "lang_skills">
-        <h1><b>Language Skills</b></h1>
-        <h3 id = h3>First Official Language (Max 24 Points)</h3>
-        <h4 id = h4>Enter your CLB Level</h4>
+        <h1><b>Language Skills (maximum 28 points)</b></h1>
+        <p>Find more about <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/language-requirements.html" target="_blank">language testing</a></p>
+        
+        <h3 id = h3>First Official Language (maximum 24 Points)</h3>
+        <details>
+            <summary>CLB Level Breakdown for First Language</summary>
+            <div class = "clb_breakdown">
+                <!-- <h4>CLB Level Breakdown</h4> -->
+                <table>
+                    <style>
+                        table {
+                            width: 100%;
+                            border-collapse: collapse;
+                        }
+                        th, td {
+                            border: 1px solid black;
+                            padding: 8px;
+                            text-align: left;
+                        }
+                        th {
+                            background-color: #f2f2f2;
+                        }
+                    </style>
+                    <thead>
+                        <tr>
+                            <th>First official language</th>
+                            <th>Speaking</th>
+                            <th>Listening</th>
+                            <th>Reading</th>
+                            <th>Writing</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CLB level 9 or higher</td>
+                            <td>6</td>
+                            <td>6</td>
+                            <td>6</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>CLB level 8</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>CLB level 7</td>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Below CLB level 7</td>
+                            <td colspan="4">Not eligible to apply</td>
+                        </tr>
+                    </tbody>
+                </table>  
+            </div>
+        </details>
+        <!-- <h4 id = h4>Enter your CLB Level</h4> -->
         <!--this is a spinbox for clb level-->
         <!-- <label for="options"></label> -->
         <select id="options" name="options">
@@ -41,77 +123,41 @@
     </select>
     
     
-    <h3 id= h3>Second Official Language (Max 4 Points)</h3>
-    <h4 id = h4>Enter your CLB Level</h4>
+    <h3 id= h3>Second Official Language (maximum 4 Points)</h3>
+    <!-- <h4 id = h4>Enter your CLB Level</h4> -->
+    <details>
+        <summary>CLB Level Breakdown for Second Official Language</summary>
+        <div class ="clb_breakdown2">
+            <table>
+                <thead>
+                    <tr>
+                        <th><strong>Second Official Language</strong></th>
+                        <th><strong>Points<strong></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>At least CLB 5 in all of the 4 abilities</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>CLB 4 or less in any of the 4 abilities</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </details>
     <select id="options" name="options">
         <option selected>Choose you CLB Level:</option>
         <option value="option1">CLB 5 in All 4 abilities</option>
         <option value="option2">CLB 4 or less</option>
     </select>
-    <details>
-        <summary>CLB Level Breakdown</summary>
-        <div class = "clb_breakdown">
-            <h4>CLB Level Breakdown</h4>
-            <table>
-                <style>
-                    table {
-                        width: 100%;
-                        border-collapse: collapse;
-                    }
-                    th, td {
-                        border: 1px solid black;
-                        padding: 8px;
-                        text-align: left;
-                    }
-                    th {
-                        background-color: #f2f2f2;
-                    }
-                </style>
-                <thead>
-                    <tr>
-                        <th>First official language</th>
-                        <th>Speaking</th>
-                        <th>Listening</th>
-                        <th>Reading</th>
-                        <th>Writing</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>CLB level 9 or higher</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                    </tr>
-                    <tr>
-                        <td>CLB level 8</td>
-                        <td>5</td>
-                        <td>5</td>
-                        <td>5</td>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>CLB level 7</td>
-                        <td>4</td>
-                        <td>4</td>
-                        <td>4</td>
-                        <td>4</td>
-                    </tr>
-                    <tr>
-                        <td>Below CLB level 7</td>
-                        <td colspan="4">Not eligible to apply</td>
-                    </tr>
-                </tbody>
-            </table>  
-        </div>
-    </details>
-    
-
     </div>
    
-    <div class = "Education">
-        <h1>Education</h1>
+    <div class = "education">
+        <h1>Education(maximum 25 points)</h1>
+        <p><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/education-assessed/read-report.html" target="_blank">How to read your report</a> and calculate your points for education</p>
         <h3 id= h3>Select your level of education</h3>
         <select id ="options" name ="option">
             <option selected>Level of education</option>
@@ -120,7 +166,39 @@
     </div>
 
     <div class = "work_exp">
-        <h1>Work Experiance</h1>
+        <h1>Work Experiance (maximum 15 points)</h1>
+        <p>You can get points for the number of years you’ve spent doing full-time paid work (at least 30 hours per week, or an equal amount of part-time [15 hours per week for 24 months]) in a skilled occupation listed in Training, Education, Experience and Responsibilities (TEER) category 0, 1, 2 or 3 of the 2021<a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/find-national-occupation-code.html" target="_blank"> National Occupational Classification</a> (NOC).</p>
+        <details>
+            <summary>Use this chart to find the number of points based on your number of years of experience.</summary>
+            <div class ="clb_breakdown2">
+                <table>
+                    <thead>
+                        <tr>
+                            <th><strong>Experiance</strong></th>
+                            <th><strong>Points<strong></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1 year</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>2-3 years</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>4-5 years</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>6 or more years</td>
+                            <td>15</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </details>
         <select id ="options" name ="option">
             <option selected>Year</option>
             <option value ="option1">1 year</option>
@@ -129,8 +207,79 @@
             <option value ="option4">6 or more year</option>
         </select>
     </div>
-    <div class = "Age">
-        <h1>Age</h1>
+    <div class = "age">
+        <h1>Age (maximum 12 points)</h1>
+        <details>
+            <summary>You’ll get points based on your age on the day we get your application.</summary>
+            <div class ="clb_breakdown2">
+                <table>
+                    <thead>
+                        <tr>
+                            <th><strong>Age</strong></th>
+                            <th><strong>Points</strong></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Under 18</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>18-35</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>37</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>39</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>41</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>42</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>43</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>44</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>45</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>46</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>47 and older</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </details>
         <select id = "options" name="option">
             <option selected>Select your age</option>
             <option value ="option1">Under 18</option>
@@ -147,13 +296,57 @@
             <option value ="option1">45</option>
             <option value ="option1">46</option>
             <option value ="option1">47 or Older</option>
-            <option value ="option1">Und8</option>
         </select>
     </div>
     <div class = "employment">
-        <h1>Arranged Employment</h1>    
+        <h1>Arranged Employment in Canada (maximun 10 points)</h1>
+        <p>You can get points if you have a job offer of <strong>at least 1 year</strong> from a Canadian employer. You must get the job offer before you apply to come to Canada as a Federal Skilled Worker.
+        <br>
+        Know more about vaild job offer <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/offer-employment.html" target="_blank">here</a>.
+        </p> 
+        <details>
+            <summary>Details about situations</summary>
+            <div class ="details_employ">
+                <p><h4>Situation 1</h4>
+                    <p>You currently work in Canada on a work permit and you meet all of the following conditions:</p>
+                    <ul>
+                        <li>Your work permit is valid both when you apply and when the permanent resident visa is issued (or youre allowed to work in Canada without a work permit when your visa is issued).</li>
+                        <li>We issued your work permit based on a positive labour market impact assessment (LMIA) from Employment and Social Development Canada in an occupation listed in TEER category 0, 1, 2 or 3 of the NOC.</li>
+                        <li>Youre working for an employer named on your work permit.</li>
+                        <li>That employer has made a valid job offer based on you being accepted as a skilled worker.</li>
+                    </ul>
+                </p>
+                <p>
+                    <h4>Situation 2</h4>
+                    <p> You currently work in Canada in a job that is exempt from the LMIA requirement because of <strong>1</strong> of the following:</p>
+                    <ul>
+                        <li>an international agreement (such as, the North American Free Trade Agreement) or</li>
+                        <li>significant benefit to Canadian interests or</li>
+                        <li>a federal-provincial agreement</li>
+                    </ul>
+                    <p>You must <strong>also</strong> meet <strong>all</strong> of the following conditions:</p>
+                    <ul>
+                        <li>Your work permit is valid both when you apply and when the permanent resident visa is issued (or you’re allowed to work in Canada without a permit when your permanent resident visa is issued).</li>
+                        <li>Your current employer has made a valid job offer based on you being accepted as a skilled worker.</li>
+                        <li>You are currently working for the employer specified on your work permit.</li>
+                        <li>You have been working for that employer for at least 1 year, continuous full-time or part-time equivalent.</li>
+                    </ul>
+                    
+                </p>
+                <p>
+                    <h4>Situation 3</h4>
+                    <p>You must meet <strong>all</strong> of the following conditions:</p>
+                    <ul>
+                        <li>You currently don’t have a work permit, or don’t plan to work in Canada before you get a permanent resident visa.</li>
+                        <li>An employer has a LMIA.</li>
+                        <li>That employer has made you a valid job offer based on that LMIA and on you being accepted as a skilled worker.</li>
+                    </ul>
+                </p>
+
+            </div>
+        </details>  
         <select id ="options" name = "option">
-            <option selected>Select from the spinbox</option>
+            <option selected>Select your situation</option>
             <option value = "option1">Situation 1</option>
             <option value = "option1">Situation 2</option>
             <option value = "option1">Situation 3</option>
@@ -161,37 +354,12 @@
 
         </select>
     </div>
-    <details>
-        <summary>More</summary>
-        <div class ="details_employ">
-            <p><h4>Situation 1</h4>
-                <p>You currently work in Canada on a work permit and you meet all of the following conditions:</p>
-                <ul>
-                    <li>Your work permit is valid both when you apply and when the permanent resident visa is issued (or youre allowed to work in Canada without a work permit when your visa is issued).</li>
-                    <li>We issued your work permit based on a positive labour market impact assessment (LMIA) from Employment and Social Development Canada in an occupation listed in TEER category 0, 1, 2 or 3 of the NOC.</li>
-                    <li>Youre working for an employer named on your work permit.</li>
-                    <li>That employer has made a valid job offer based on you being accepted as a skilled worker.</li>
-                </ul>
-            </p>
-            <p>
-                <h4>Situation 2</h4>
-                <p> You currently work in Canada in a job that is exempt from the LMIA requirement because of <strong>1</strong> of the following:</p>
-                <ul>
-                    <li>an international agreement (such as, the North American Free Trade Agreement) or</li>
-                    <li>significant benefit to Canadian interests or</li>
-                    <li>a federal-provincial agreement</li>
-                </ul>
-                <p>You must <strong>also</strong> meet <strong>all</strong> of the following conditions:</p>
-                <ul>
-                    <li>Your work permit is valid both when you apply and when the permanent resident visa is issued (or you’re allowed to work in Canada without a permit when your permanent resident visa is issued).</li>
-                    <li>Your current employer has made a valid job offer based on you being accepted as a skilled worker.</li>
-                    <li>You are currently working for the employer specified on your work permit.</li>
-                    <li>You have been working for that employer for at least 1 year, continuous full-time or part-time equivalent.</li>
-                </ul>
-            </p>
-        </div>
-    </details>
-</body>
+    <div class ="adaptibility">
+        <h1>adaptibility Points (maximum 10 points)</h1>
+        <p><strong>You and your spouse or common-law partner who will immigrate with you to Canada</strong> can earn points for adaptability. You and your spouse can earn a maximum of 10 points by combining any of the elements below. These elements assess how well you and your spouse are likely to settle in Canada.</p>
+    </div>
 </main>
 </div>
+</div>
+</body>
 </html>
