@@ -10,7 +10,7 @@ body{
 
 .all{
     width: 80%;
-    height: 60%;
+    height: 80%;
     /* border: 2px solid black; */
     overflow-y: scroll;
     /* overflow: hidden;  */
@@ -103,7 +103,7 @@ header, main {
     margin-right: 10px ;
 }
 
-#options {
+#options{
     color: white;
     background-color: black;
     overflow: hidden; /* Ensures the text is hidden until the animation reveals it */
@@ -112,6 +112,11 @@ header, main {
     animation: typewriter 2s steps(40) 1s 1 normal both,blink 0.75s step-end 2s 1 normal both;
     transition: 2s ease-in-out;
 }
+
+/* #edu_button, #ada_button{
+    color: white;
+    background-color: black;
+} */
 
 @keyframes typewriter {
     from {
@@ -167,6 +172,29 @@ h1:hover{
 
 .lang_skills, .education, .age, .employment, .work_exp, .adaptibility, details{
     padding: 8px;
+}
+
+.totalbutton{
+    padding-bottom:  10px; ;
+}
+
+#total_button{
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding:10px 20px;
+    border-color: white;
+    font-weight: 400;
+    border-radius: 20px;
+    transition: 0.5s ease-in-out;
+}
+
+#total_button:hover{
+    background-color: brown;
+    color: white;
+    letter-spacing: 0.05rem;
+    /* box-shadow: 0 0 30px brown; */
 }
 
 body {
