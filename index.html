@@ -7,9 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel = "stylesheet" href = "style.css">
     
-
 </head>
 <body>
+    <script src="script.js"></script>
 <div class ="all">
     <!-- <div class = "header-container">
     <header>
@@ -114,12 +114,15 @@
         <!-- <h4 id = h4>Enter your CLB Level</h4> -->
         <!--this is a spinbox for clb level-->
         <!-- <label for="options"></label> -->
-        <select id="options" name="options">
+        <!-- <select id="options" name="options">
         <option selected>Choose you CLB Level:</option>
         <option value="option1">CLB Level 9 or Higher</option>
         <option value="option2">CLB Level 8</option>
         <option value="option3">CLB Level 7</option>
-        <option value="option4">Below CLB Level 7</option>
+        <option value="option4">Below CLB Level 7</option> -->
+        <input type="number" id="clb1" placeholder="Enter your points" max="25">
+        <button id ="clb1_button" onclick="getNumber()">Submit</button>
+        <p id="clb1_output"></p>
     </select>
     
     
@@ -148,21 +151,28 @@
             </table>
         </div>
     </details>
-    <select id="options" name="options">
+    <!-- <select id="options" name="options">
         <option selected>Choose you CLB Level:</option>
         <option value="option1">CLB 5 in All 4 abilities</option>
         <option value="option2">CLB 4 or less</option>
-    </select>
+    </select> -->
+    <input type="number" id="clb2" placeholder="Enter your points">
+        <button id ="clb2_button" onclick="getNumber2()">Submit</button>
+        <p id="clb2_output"></p>
     </div>
    
     <div class = "education">
         <h1>Education(maximum 25 points)</h1>
         <p><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/education-assessed/read-report.html" target="_blank">How to read your report</a> and calculate your points for education</p>
-        <h3 id= h3>Select your level of education</h3>
-        <select id ="options" name ="option">
+        <h3 id= h3>Calculate your points</h3>
+        <!-- <select id ="options" name ="option">
             <option selected>Level of education</option>
             <!-- <option value = "1"></option> -->
-        </select>
+        <!-- </select> --> 
+        <input type="number" id="education" placeholder="Enter your points">
+        <button id ="edu_button" onclick="getEdu()">Submit</button>
+        <p id="edu_output"></p>
+
     </div>
 
     <div class = "work_exp">
@@ -199,12 +209,12 @@
                 </table>
             </div>
         </details>
-        <select id ="options" name ="option">
+        <select id ="work_points" name ="work_points" onclick="getWork()">
             <option selected>Year</option>
-            <option value ="option1">1 year</option>
-            <option value ="option2">2 -3 year</option>
-            <option value ="option3">4-5 year</option>
-            <option value ="option4">6 or more year</option>
+            <option value ="9">1 year</option>
+            <option value ="11">2 -3 year</option>
+            <option value ="13">4-5 year</option>
+            <option value ="15">6 or more year</option>
         </select>
     </div>
     <div class = "age">
@@ -280,22 +290,22 @@
                 </table>
             </div>
         </details>
-        <select id = "options" name="option">
+        <select id = "age_koto" name="age_koto" onclick="age_bolo()">
             <option selected>Select your age</option>
-            <option value ="option1">Under 18</option>
-            <option value ="option1">18-35</option>
-            <option value ="option1">36</option>
-            <option value ="option1">37</option>
-            <option value ="option1">38</option>
-            <option value ="option1">39</option>
-            <option value ="option1">40</option>
-            <option value ="option1">41</option>
-            <option value ="option1">42</option>
-            <option value ="option1">43</option>
-            <option value ="option1">44</option>
-            <option value ="option1">45</option>
-            <option value ="option1">46</option>
-            <option value ="option1">47 or Older</option>
+            <option value ="0">Under 18</option>
+            <option value ="12">18-35</option>
+            <option value ="11">36</option>
+            <option value ="10">37</option>
+            <option value ="9">38</option>
+            <option value ="8">39</option>
+            <option value ="7">40</option>
+            <option value ="6">41</option>
+            <option value ="5">42</option>
+            <option value ="4">43</option>
+            <option value ="3">44</option>
+            <option value ="2">45</option>
+            <option value ="1">46</option>
+            <option value ="0">47 or Older</option>
         </select>
     </div>
     <div class = "employment">
@@ -345,19 +355,95 @@
 
             </div>
         </details>  
-        <select id ="options" name = "option">
+        <select id ="employ_ase" name = "employ_ase" onclick="employ_lagbe()">
             <option selected>Select your situation</option>
-            <option value = "option1">Situation 1</option>
-            <option value = "option1">Situation 2</option>
-            <option value = "option1">Situation 3</option>
-            <option value = "option1">Situation 4</option>
+            <option value = "10">Situation 1</option>
+            <option value = "10">Situation 2</option>
+            <option value = "10">Situation 3</option>
+            <option value = "10">Situation 4</option>
 
         </select>
     </div>
     <div class ="adaptibility">
         <h1>adaptibility Points (maximum 10 points)</h1>
         <p><strong>You and your spouse or common-law partner who will immigrate with you to Canada</strong> can earn points for adaptability. You and your spouse can earn a maximum of 10 points by combining any of the elements below. These elements assess how well you and your spouse are likely to settle in Canada.</p>
+        <details>
+            <summary>Calculate your adaptability points from the chart</summary>
+            <div class="adaptability_chart">
+                <!-- <h1>Adaptability Points (maximum 10 points)</h1> -->
+<table>
+    <thead>
+        <tr>
+            <th>Criteria</th>
+            <th>Points</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Your spouse or partner’s language level<br>
+                <small>Your spouse or common-law partner has a language level in either English or French at <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/language-requirements.html" target="_blank">CLB 4 level</a> or higher in all 4 language abilities (speaking, listening, reading, and writing).<br>
+                    To get these points, you must submit your spouse or common-law partner’s <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/language-requirements/language-testing.html" target="_blank">test results from an approved agency</a> when you apply. The language tests are valid for 2 years after the date of the test result. They must be valid on the day you apply for permanent residence.
+                </small>
+            </td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Your past studies in Canada<br>
+                <small>You completed at least 2 academic years of full-time study (in a program at least 2 years long) at a secondary or post-secondary school in Canada.</small>
+            </td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Your spouse or partner’s past studies in Canada<br>
+                <small>Your spouse or common-law partner completed at least 2 academic years of full-time study (in a program at least 2 years long) at a secondary or post-secondary school in Canada.</small>
+            </td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Your past work in Canada<br>
+                <small>You did at least 1 year of full-time work in Canada:</small>
+                <ol>
+                    <li><small>In a job listed in TEER category 0, 1, 2 or 3 of the NOC</small></li>
+                    <li><small>And, with a valid work permit, or while authorized to work in Canada</small></li>
+                </ol>
+            </td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Your spouse or partner’s past work in Canada<br>
+                <small>Your spouse or partner did at least 1 year of full-time work in Canada on a valid work permit or while authorized to work in Canada.</small>
+            </td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Arranged employment in Canada<br>
+                <small>You earned points for having arranged employment.</small>
+            </td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Relatives in Canada<br>
+                <small>You, or your spouse or common-law partner, have a relative who is:</small>
+            </td>
+            <td>5</td>
+        </tr>
+    </tbody>
+</table>
+            </div>
+        </details>
+
+        <input type="number" id="adaptability" placeholder="Enter your points">
+        <button id ="ada_button" onclick="ada_fun()">Submit</button>
+        <p id="ada_output"></p>   
     </div>
+    <div id="results">
+        <h2>Total Points: <span id="totalPoints">0</span></h2>
+        <p id="result"></p>
+    </div>
+
+    <!-- <div class ="totalbutton">
+        <a href="totalpoints.html"><button id ="total_button">Calculate your points</button></a>
+    </div> -->
 </main>
 </div>
 </div>
